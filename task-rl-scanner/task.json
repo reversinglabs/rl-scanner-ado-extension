@@ -1,0 +1,55 @@
+{
+    "": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "08f13401-77c7-42b1-95b5-70ac82197634",
+    "name": "rl-scanner-task",
+    "friendlyName": "rl-scanner-task",
+    "description": "rl-scanner-task",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "ReversingLabs",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 6
+    },
+    "instanceNameFormat": "rl-scanner-task",
+    "inputs": [
+        {
+            "name": "MY_ARTIFACT_TO_SCAN",
+            "type": "string",
+            "label": "MY_ARTIFACT_TO_SCAN",
+            "defaultValue": "_NOT_SPECIFIED_",
+            "required": true,
+            "helpMarkDown": "MY_ARTIFACT_TO_SCAN"
+        },
+        {
+            "name": "REPORT_PATH",
+            "type": "string",
+            "label": "REPORT_PATH",
+            "defaultValue": "report",
+            "required": false,
+            "helpMarkDown": "REPORT_PATH"
+        },
+        {
+            "name": "BUILD_PATH",
+            "type": "string",
+            "label": "BUILD_PATH",
+            "defaultValue": ".",
+            "required": false,
+            "helpMarkDown": "BUILD_PATH"
+        },
+        {
+            "name": "RL_VERBOSE",
+            "type": "string",
+            "label": "RL_VERBOSE",
+            "defaultValue": "0",
+            "required": false,
+            "helpMarkDown": "RL_VERBOSE"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}

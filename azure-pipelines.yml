@@ -1,0 +1,27 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: rl-scanner
+- name: BUILD_PATH
+  value: '.'
+- name: REPORT_PATH
+  value: 'report'
+- name: MY_ARTIFACT_TO_SCAN
+  value: 'README.md'
+
+steps:
+
+- task: rl-scanner-task@1
+  displayName: rl-scanner-task
+  inputs:
+    BUILD_PATH: $(BUILD_PATH)
+    REPORT_PATH: $(REPORT_PATH)
+    MY_ARTIFACT_TO_SCAN: $(MY_ARTIFACT_TO_SCAN)
+  env:
+    RLSECURE_ENCODED_LICENSE: $(RLSECURE_ENCODED_LICENSE)
+    RLSECURE_SITE_KEY: $(RLSECURE_SITE_KEY)
+

@@ -1,0 +1,48 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: rl-scanner
+- name: BUILD_PATH
+  value: '.'
+- name: REPORT_PATH
+  value: 'report'
+- name: MY_ARTIFACT_TO_SCAN
+  value: 'README.md'
+
+steps:
+
+- task: rl-scanner-task@1
+  displayName: rl-scanner-task
+  inputs:
+    BUILD_PATH: $(BUILD_PATH)
+    REPORT_PATH: $(REPORT_PATH)
+    MY_ARTIFACT_TO_SCAN: $(MY_ARTIFACT_TO_SCAN)
+  env:
+    RLSECURE_ENCODED_LICENSE: $(RLSECURE_ENCODED_LICENSE)
+    RLSECURE_SITE_KEY: $(RLSECURE_SITE_KEY)
+
+- publish: $(System.DefaultWorkingDirectory)/$(REPORT_PATH)/report.cyclonedx.json
+  displayName: 'Publish CycloneDX'
+  artifact: 'CycloneDX-SBOM'
+  condition: succeededOrFailed()
+
+- publish: $(System.DefaultWorkingDirectory)/$(REPORT_PATH)/report.spdx.json
+  displayName: 'Publish SPDX'
+  artifact: 'SPDX-SBOM'
+  condition: succeededOrFailed()
+
+- publish: $(System.DefaultWorkingDirectory)/$(REPORT_PATH)/report.rl.json
+  displayName: 'Publish RL-json'
+  artifact: ReversingLabs-JSONreport
+  condition: succeededOrFailed()
+
+- task: PublishBuildArtifacts@1
+  condition: succeededOrFailed()
+  inputs:
+    PathtoPublish: $(System.DefaultWorkingDirectory)/$(REPORT_PATH)/rl-html
+    ArtifactName: 'ReversingLabs-HTMLreport'
+    StoreAsTar: true

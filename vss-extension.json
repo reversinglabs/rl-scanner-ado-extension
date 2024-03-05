@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 1,
+  "id": "rl-scanner-task",
+  "name": "ReversingLabs rl-scanner task",
+  "version": "1.0.6",
+  "publisher": "ReversingLabs",
+  "public": true,
+  "description": "ReversingLabs rl-scanner as a Azure DevOps extension",
+  "content": {
+    "details": {
+      "path": "README.md"
+    },
+    "license": {
+      "path": "eula.md"
+    }
+  },
+  "links": {
+    "home": {
+      "uri": "https://www.reversinglabs.com/"
+    },
+    "getstarted": {
+      "uri": "https://docs.secure.software/cli"
+    },
+    "learn": {
+      "uri": "https://docs.secure.software/cli/integrations"
+    },
+    "support": {
+      "uri": "https://www.reversinglabs.com/contact-us"
+    },
+    "repository": {
+      "uri": "https://github.com/reversinglabs/rl-scanner-ado-extension"
+    },
+    "issues": {
+      "uri": "https://github.com/reversinglabs/rl-scanner-ado-extension/issues"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/reversinglabs/rl-scanner-ado-extension"
+  },
+  "tags": [
+    "ReversingLabs",
+    "Secure Software",
+    "Software Supply Chain"
+  ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "icons": {
+    "default": "images/reversinglabs_logo.jpeg"
+  },
+  "files": [
+    {
+      "path": "task-rl-scanner"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "custom-build-release-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "task-rl-scanner"
+      }
+    }
+  ]
+}

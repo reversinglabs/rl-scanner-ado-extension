@@ -1,0 +1,31 @@
+{
+  "name": "rl-scanner-task",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "ReversingLabs",
+  "description": "rl-scanner-task",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "azure-pipelines-task-lib": "^4.5.0",
+    "typescript-formatter": "^7.2.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.5.9",
+    "@types/q": "^1.5.6",
+    "sync-request": "^6.1.0",
+    "gts": "^5.0.1",
+    "typescript": "~5.1.6"
+  }
+}
