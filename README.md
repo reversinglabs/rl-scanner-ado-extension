@@ -137,7 +137,7 @@ The `azure-pipelines.yml` file in this repository is an example of a basic Azure
 
       steps:
 
-      - task: rl-scanner-task@0
+      - task: rl-scanner-task@1
         displayName: rl-scanner-task
         inputs:
           BUILD_PATH: $(BUILD_PATH)
@@ -169,7 +169,7 @@ The `azure-pipelines-with-upload.yml` file in this repository is an example of a
 
       steps:
 
-      - task: rl-scanner-task@0
+      - task: rl-scanner-task@1
         displayName: rl-scanner-task
         inputs:
           BUILD_PATH: $(BUILD_PATH)
