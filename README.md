@@ -106,7 +106,6 @@ The following secrets **must** be passed via `inputs:`
 | `BUILD_PATH` | **Yes**| The directory where the build artifact specified with the `MY_ARTIFACT_TO_SCAN` parameter is located. The path must be relative to `$(System.DefaultWorkingDirectory)`. **The default value is `.`** | string |
 | `MY_ARTIFACT_TO_SCAN` | **Yes**| The name of the file you want to scan. Must be relative to `BUILD_PATH`. The file must exist in the specified location before the scan starts. | string |
 | `REPORT_PATH` | No | The directory where analysis reports will be stored after the scan is finished. The path must be relative to `$(System.DefaultWorkingDirectory)`. The directory must be empty before the scan starts. **The default value is `RlReport`** | string |
-| `RL_WITH_UPLOAD` | No | Automatically uploads analysis reports into the Azure DevOps pipeline after the scan is finished. **The default value is `true`** ; the option is enabled by default. | boolean |
 | `RL_VERBOSE` | No | Includes detailed progress feedback into the pipeline output and displays the `stdout` and `stderr` messages from the `rl-secure` run in the Docker container. **The default value is `false`**; the option is disabled by default. | boolean |
 | `RL_PROXY_SERVER` | No | Server name for optional proxy configuration (IP address or DNS name). | string |
 | `RL_PROXY_PORT` | No | Network port on the proxy server for optional proxy configuration. Required if RL_PROXY_SERVER is used. | string |
