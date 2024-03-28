@@ -25,7 +25,7 @@ The `rl-scanner-task` extension is most suitable for experienced users who want 
 ## What is rl-secure?
 
 `rl-secure` is a CLI tool that's part of the
-[secure.software platform](https://www.secure.software/) - a new ReversingLabs solution for software supply chain protection.
+[Spectra Assure platform](https://www.reversinglabs.com/products/software-supply-chain-security) - a new ReversingLabs solution for software supply chain protection.
 
 With `rl-secure`, you can:
 
