@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "rl-scanner-task",
   "name": "ReversingLabs rl-scanner task",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "publisher": "ReversingLabs",
   "public": true,
   "description": "ReversingLabs rl-scanner as a Azure DevOps extension",
@@ -53,7 +53,7 @@
     "Azure Pipelines"
   ],
   "icons": {
-    "default": "images/reversinglabs_logo.jpeg"
+    "default": "images/reversinglabs_logo.png"
   },
   "files": [
     {
