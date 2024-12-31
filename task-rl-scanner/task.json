@@ -1,7 +1,7 @@
 {
     "": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
     "id": "08f13401-77c7-42b1-95b5-70ac82197634",
-    "name": "ReversingLabs rl-scanner-task",
+    "name": "rl-scanner-task",
     "friendlyName": "ReversingLabs rl-scanner as a Azure DevOps extension",
     "description": "ReversingLabs rl-scanner as a Azure DevOps extension",
     "helpMarkDown": "",
@@ -10,7 +10,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 9
+        "Patch": 10
     },
     "instanceNameFormat": "rl-scanner-task",
     "inputs": [
