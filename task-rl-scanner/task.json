@@ -2,15 +2,15 @@
     "": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
     "id": "08f13401-77c7-42b1-95b5-70ac82197634",
     "name": "rl-scanner-task",
-    "friendlyName": "ReversingLabs rl-scanner as a Azure DevOps extension",
-    "description": "ReversingLabs rl-scanner as a Azure DevOps extension",
+    "friendlyName": "ReversingLabs rl-scanner as an extension",
+    "description": "ReversingLabs rl-scanner as an Azure DevOps extension",
     "helpMarkDown": "",
     "category": "Utility",
     "author": "ReversingLabs",
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 10
+        "Patch": 11
     },
     "instanceNameFormat": "rl-scanner-task",
     "inputs": [
@@ -48,7 +48,7 @@
         }
     ],
     "execution": {
-        "Node": {
+        "Node20_1": {
             "target": "index.js"
         }
     }

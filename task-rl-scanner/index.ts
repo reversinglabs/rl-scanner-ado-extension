@@ -89,7 +89,7 @@ main()
       rl-scan \
         --package-path=/packages/${MY_ARTIFACT_TO_SCAN} \
         --report-path=/report \
-        --report-format=all
+        --report-format=all --pack-safe
 }
 main`;
     console.log('# todo: bash: ', command);

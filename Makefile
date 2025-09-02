@@ -3,6 +3,8 @@ DIR	= task-rl-scanner
 
 build:
 	./verify-version-sync.sh
+	npm install
 	pushd $(DIR); make; popd
+	npm prune --production
 	tfx extension create --manifest-globs vss-extension.json
 	rm $(DIR)/index.js
