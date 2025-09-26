@@ -14,7 +14,6 @@ variables:
   value: 'README.md'
 
 steps:
-
 - task: rl-scanner-task@1
   displayName: rl-scanner-task
   inputs:
@@ -24,11 +23,6 @@ steps:
   env:
     RLSECURE_ENCODED_LICENSE: $(RLSECURE_ENCODED_LICENSE)
     RLSECURE_SITE_KEY: $(RLSECURE_SITE_KEY)
-
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: ls -laR $(REPORT_PATH)
 
 - publish: $(System.DefaultWorkingDirectory)/$(REPORT_PATH)/report.cyclonedx.json
   displayName: 'Publish CycloneDX'

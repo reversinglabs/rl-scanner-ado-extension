@@ -5,6 +5,6 @@ build:
 	./verify-version-sync.sh
 	npm install
 	pushd $(DIR); make; popd
-	npm prune --production
+	npm prune --omit=dev --json
 	tfx extension create --manifest-globs vss-extension.json
-	rm $(DIR)/index.js
+	# rm $(DIR)/index.js
