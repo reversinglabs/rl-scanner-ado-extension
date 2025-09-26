@@ -17,10 +17,10 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
-    "azure-pipelines-task-lib": "^4.5.0",
-    "typescript-formatter": "^7.2.2"
+    "azure-pipelines-task-lib": "^4.5.0"
   },
   "devDependencies": {
+    "typescript-formatter": "^7.2.2",
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.5.9",
     "@types/q": "^1.5.6",
