@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "tfx-cli": "^0.16.0"
+    "tfx-cli": "^0.22.1"
   }
 }
